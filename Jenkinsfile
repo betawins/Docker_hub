@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh ' docker build -t abair0509/sampleapp:$BUILD_NUMBER .'
+                sh ' docker build -t sabair0509/sampleapp:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
