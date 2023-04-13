@@ -8,7 +8,7 @@ RUN apk --no-cache add curl && \
 RUN tar -xvf apache*.tar.gz
 RUN mv apache-tomcat-9.0.73/* /usr/local/tomcat/.
 RUN rm -rf apache-*
-COPY /var/lib/jenkins/workspace/Git-first/target/SimpleCustomerApp-*.war/ /usr/local/tomcat/webapps
+COPY /var/lib/jenkins/workspace/Git-first/target/SimpleCustomerApp-$BUILD_NUMBER-SNAPSHOT.war/ /usr/local/tomcat/webapps
 RUN apk update && apk add openjdk8
 WORKDIR /usr/local/tomcat
 EXPOSE 8080
