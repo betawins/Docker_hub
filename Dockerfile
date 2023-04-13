@@ -4,9 +4,9 @@ RUN mkdir /usr/local/tomcat/
 WORKDIR /usr/local/tomcat
 RUN apk --no-cache add curl && \
     apk add --update curl && \
-        curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
+        curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.tar.gz
 RUN tar -xvf apache*.tar.gz
-RUN mv apache-tomcat-9.0.70/* /usr/local/tomcat/.
+RUN mv apache-tomcat-9.0.73/* /usr/local/tomcat/.
 RUN rm -rf apache-*
 COPY /var/lib/jenkins/workspace/Git-first/target/SimpleCustomerApp-*/ /usr/local/tomcat/webapps
 RUN apk update && apk add openjdk8
